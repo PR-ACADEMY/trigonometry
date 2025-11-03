@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+        .container-main {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .nav-tabs .nav-link {
+            font-weight: bold;
+            color: #495057;
+            border: none;
+            padding: 15px 20px;
+            transition: all 0.3s;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #4e73df;
+            color: white;
+            border-radius: 8px;
+        }
+        .nav-tabs .nav-link:hover:not(.active) {
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .tab-content {
+            padding: 20px;
+            min-height: 500px;
+        }
+        .example-card {
+            border-left: 4px solid #4e73df;
+            background-color: #f8f9fc;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .topic-card {
+            background: linear-gradient(to right, #4e73df, #224abe);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .step-box {
+            background-color: #e8f4fd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 3px solid #36b9cc;
+        }
+        .important-point {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .footer-note {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-style: italic;
+            color: #6c757d;
+        }
+        .math-formula {
+            font-family: 'Cambria Math', serif;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .section-title {
+            color: #4e73df;
+            border-bottom: 2px solid #4e73df;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-main">
+        <div class="header-section">
+            <h1>📐 Trigonometry Tutorial</h1>
+            <p class="lead">Mastering De Moivre's Theorem, Hyperbolic Functions, and More</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="nav flex-column nav-tabs" id="v-tabs" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="tutorials-tab" data-bs-toggle="tab" data-bs-target="#tutorials" type="button" role="tab" aria-controls="tutorials" aria-selected="true">📚 Tutorials</button>
+                    <button class="nav-link" id="examples-tab" data-bs-toggle="tab" data-bs-target="#examples" type="button" role="tab" aria-controls="examples" aria-selected="false">📝 Examples</button>
+                    <button class="nav-link" id="points-tab" data-bs-toggle="tab" data-bs-target="#points" type="button" role="tab" aria-controls="points" aria-selected="false">💡 Important Points</button>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content" id="v-tabsContent">
+                    <!-- Tutorials Tab -->
+                    <div class="tab-pane fade show active" id="tutorials" role="tabpanel" aria-labelledby="tutorials-tab">
+                        <h2 class="section-title">Trigonometry Tutorials</h2>
+                        
+                        <div class="topic-card">
+                            <h3>De Moivre's Theorem</h3>
+                            <p>De Moivre's Theorem states that for any real number θ and integer n:</p>
+                            <div class="math-formula">
+                                (cos θ + i sin θ)<sup>n</sup> = cos(nθ) + i sin(nθ)
+                            </div>
+                            <p>This theorem is fundamental in connecting complex numbers and trigonometry.</p>
+                        </div>
+                        
+                        <div class="topic-card">
+                            <h3>Hyperbolic Functions</h3>
+                            <p>Hyperbolic functions are analogs of trigonometric functions but for hyperbolas:</p>
+                            <div class="math-formula">
+                                sinh x = (e<sup>x</sup> - e<sup>-x</sup>)/2<br>
+                                cosh x = (e<sup>x</sup> + e<sup>-x</sup>)/2<br>
+                                tanh x = sinh x / cosh x
+                            </div>
+                        </div>
+                        
+                        <div class="topic-card">
+                            <h3>Gregory's Series</h3>
+                            <p>Gregory's series provides an expansion for the inverse tangent function:</p>
+                            <div class="math-formula">
+                                tan<sup>-1</sup> x = x - x<sup>3</sup>/3 + x<sup>5</sup>/5 - x<sup>7</sup>/7 + ... for |x| ≤ 1
+                            </div>
+                        </div>
+                        
+                        <div class="topic-card">
+                            <h3>Expansion of Trigonometric Functions</h3>
+                            <p>Trigonometric functions can be expanded using various series:</p>
+                            <div class="math-formula">
+                                cos nθ = C(n,0)cos<sup>n</sup>θ - C(n,2)cos<sup>n-2</sup>θ sin<sup>2</sup>θ + ...<br>
+                                sin nθ = C(n,1)cos<sup>n-1</sup>θ sinθ - C(n,3)cos<sup>n-3</sup>θ sin<sup>3</sup>θ + ...
+                            </div>
+                        </div>
+                        
+                        <div class="topic-card">
+                            <h3>Logarithm of Complex Quantities</h3>
+                            <p>The logarithm of a complex number z = re<sup>iθ</sup> is defined as:</p>
+                            <div class="math-formula">
+                                ln z = ln r + i(θ + 2πk), where k ∈ ℤ
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Examples Tab -->
+                    <div class="tab-pane fade" id="examples" role="tabpanel" aria-labelledby="examples-tab">
+                        <h2 class="section-title">Trigonometry Examples</h2>
+                        
+                        <!-- Example 1 -->
+                        <div class="example-card">
+                            <h4>Example 1: Applying De Moivre's Theorem</h4>
+                            <p><strong>Problem:</strong> Simplify (cos 30° + i sin 30°)<sup>4</sup></p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Apply De Moivre's Theorem<br>
+                                (cos 30° + i sin 30°)<sup>4</sup> = cos(4×30°) + i sin(4×30°)
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Calculate the angle<br>
+                                4 × 30° = 120°
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Write the result<br>
+                                cos 120° + i sin 120° = -1/2 + i(√3/2)
+                            </div>
+                        </div>
+                        
+                        <!-- Example 2 -->
+                        <div class="example-card">
+                            <h4>Example 2: Hyperbolic Function Identity</h4>
+                            <p><strong>Problem:</strong> Prove that cosh<sup>2</sup>x - sinh<sup>2</sup>x = 1</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Write the definitions<br>
+                                cosh x = (e<sup>x</sup> + e<sup>-x</sup>)/2<br>
+                                sinh x = (e<sup>x</sup> - e<sup>-x</sup>)/2
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Square both functions<br>
+                                cosh<sup>2</sup>x = (e<sup>2x</sup> + 2 + e<sup>-2x</sup>)/4<br>
+                                sinh<sup>2</sup>x = (e<sup>2x</sup> - 2 + e<sup>-2x</sup>)/4
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Subtract<br>
+                                cosh<sup>2</sup>x - sinh<sup>2</sup>x = [(e<sup>2x</sup> + 2 + e<sup>-2x</sup>) - (e<sup>2x</sup> - 2 + e<sup>-2x</sup>)]/4 = 4/4 = 1
+                            </div>
+                        </div>
+                        
+                        <!-- Example 3 -->
+                        <div class="example-card">
+                            <h4>Example 3: Using Gregory's Series</h4>
+                            <p><strong>Problem:</strong> Approximate π using Gregory's series</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Recall that tan(π/4) = 1, so π/4 = tan<sup>-1</sup>(1)
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Apply Gregory's series with x = 1<br>
+                                π/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - ...
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Calculate partial sums<br>
+                                4 terms: 4×(1 - 1/3 + 1/5 - 1/7) ≈ 2.895<br>
+                                8 terms: 4×(1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + 1/13 - 1/15) ≈ 3.017
+                            </div>
+                        </div>
+                        
+                        <!-- Example 4 -->
+                        <div class="example-card">
+                            <h4>Example 4: Expansion of cos 3θ</h4>
+                            <p><strong>Problem:</strong> Expand cos 3θ using trigonometric identities</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Write cos 3θ as cos(2θ + θ)
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Apply cosine addition formula<br>
+                                cos(2θ + θ) = cos 2θ cos θ - sin 2θ sin θ
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Use double angle formulas<br>
+                                cos 2θ = 2cos<sup>2</sup>θ - 1, sin 2θ = 2 sin θ cos θ<br>
+                                cos 3θ = (2cos<sup>2</sup>θ - 1)cos θ - (2 sin θ cos θ) sin θ
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 4:</strong> Simplify<br>
+                                cos 3θ = 2cos<sup>3</sup>θ - cos θ - 2 sin<sup>2</sup>θ cos θ = 4cos<sup>3</sup>θ - 3cos θ
+                            </div>
+                        </div>
+                        
+                        <!-- Example 5 -->
+                        <div class="example-card">
+                            <h4>Example 5: Logarithm of a Complex Number</h4>
+                            <p><strong>Problem:</strong> Find the principal value of ln(-1 + i)</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Convert to polar form<br>
+                                r = √((-1)<sup>2</sup> + 1<sup>2</sup>) = √2<br>
+                                θ = tan<sup>-1</sup>(1/(-1)) = 3π/4 (since in second quadrant)
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Write in exponential form<br>
+                                -1 + i = √2 e<sup>i(3π/4)</sup>
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Apply logarithm definition<br>
+                                ln(-1 + i) = ln(√2) + i(3π/4) = (1/2)ln 2 + i(3π/4)
+                            </div>
+                        </div>
+                        
+                        <!-- Example 6 -->
+                        <div class="example-card">
+                            <h4>Example 6: Summation of Trigonometric Series</h4>
+                            <p><strong>Problem:</strong> Find the sum S = sin θ + sin 2θ + ... + sin nθ</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Multiply both sides by 2 sin(θ/2)<br>
+                                2S sin(θ/2) = 2 sin θ sin(θ/2) + 2 sin 2θ sin(θ/2) + ... + 2 sin nθ sin(θ/2)
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Use product-to-sum identity<br>
+                                2 sin A sin B = cos(A-B) - cos(A+B)<br>
+                                Each term becomes: cos((k-1/2)θ) - cos((k+1/2)θ)
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Notice telescoping series<br>
+                                S = [cos(θ/2) - cos((n+1/2)θ)] / [2 sin(θ/2)]
+                            </div>
+                        </div>
+                        
+                        <!-- Example 7 -->
+                        <div class="example-card">
+                            <h4>Example 7: Hyperbolic Function Equation</h4>
+                            <p><strong>Problem:</strong> Solve 2 cosh x + 3 sinh x = 4</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Express in terms of e<sup>x</sup><br>
+                                2×(e<sup>x</sup> + e<sup>-x</sup>)/2 + 3×(e<sup>x</sup> - e<sup>-x</sup>)/2 = 4
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Simplify<br>
+                                (2e<sup>x</sup> + 2e<sup>-x</sup> + 3e<sup>x</sup> - 3e<sup>-x</sup>)/2 = 4<br>
+                                (5e<sup>x</sup> - e<sup>-x</sup>)/2 = 4
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Multiply by 2 and rearrange<br>
+                                5e<sup>x</sup> - e<sup>-x</sup> = 8<br>
+                                5e<sup>2x</sup> - 8e<sup>x</sup> - 1 = 0
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 4:</strong> Solve quadratic in e<sup>x</sup><br>
+                                e<sup>x</sup> = [8 ± √(64 + 20)]/10 = [8 ± √84]/10<br>
+                                Since e<sup>x</sup> > 0, e<sup>x</sup> = [8 + 2√21]/10 = [4 + √21]/5<br>
+                                x = ln([4 + √21]/5)
+                            </div>
+                        </div>
+                        
+                        <!-- Example 8 -->
+                        <div class="example-card">
+                            <h4>Example 8: De Moivre's Theorem for Roots</h4>
+                            <p><strong>Problem:</strong> Find all cube roots of 8i</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Write in polar form<br>
+                                8i = 8(cos π/2 + i sin π/2)
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Apply De Moivre's Theorem for roots<br>
+                                (8i)<sup>1/3</sup> = 8<sup>1/3</sup> [cos((π/2 + 2πk)/3) + i sin((π/2 + 2πk)/3)], k=0,1,2
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Calculate for each k<br>
+                                k=0: 2(cos π/6 + i sin π/6) = √3 + i<br>
+                                k=1: 2(cos 5π/6 + i sin 5π/6) = -√3 + i<br>
+                                k=2: 2(cos 3π/2 + i sin 3π/2) = -2i
+                            </div>
+                        </div>
+                        
+                        <!-- Example 9 -->
+                        <div class="example-card">
+                            <h4>Example 9: Trigonometric Expansion</h4>
+                            <p><strong>Problem:</strong> Express sin<sup>4</sup>θ in terms of multiple angles</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Use Euler's formula<br>
+                                sin θ = (e<sup>iθ</sup> - e<sup>-iθ</sup>)/(2i)<br>
+                                sin<sup>4</sup>θ = [(e<sup>iθ</sup> - e<sup>-iθ</sup>)/(2i)]<sup>4</sup>
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Expand using binomial theorem<br>
+                                = (1/16)[e<sup>4iθ</sup> - 4e<sup>2iθ</sup> + 6 - 4e<sup>-2iθ</sup> + e<sup>-4iθ</sup>]
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Convert back to trigonometric form<br>
+                                = (1/16)[2cos 4θ - 8cos 2θ + 6]<br>
+                                = (1/8)[cos 4θ - 4cos 2θ + 3]
+                            </div>
+                        </div>
+                        
+                        <!-- Example 10 -->
+                        <div class="example-card">
+                            <h4>Example 10: Complex Logarithm</h4>
+                            <p><strong>Problem:</strong> Find all values of ln(1 + i)</p>
+                            <div class="step-box">
+                                <strong>Step 1:</strong> Convert to polar form<br>
+                                r = √(1<sup>2</sup> + 1<sup>2</sup>) = √2<br>
+                                θ = π/4 (principal argument)
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 2:</strong> Write in exponential form<br>
+                                1 + i = √2 e<sup>i(π/4 + 2πk)</sup>, k ∈ ℤ
+                            </div>
+                            <div class="step-box">
+                                <strong>Step 3:</strong> Apply logarithm<br>
+                                ln(1 + i) = ln(√2) + i(π/4 + 2πk)<br>
+                                = (1/2)ln 2 + i(π/4 + 2πk)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Important Points Tab -->
+                    <div class="tab-pane fade" id="points" role="tabpanel" aria-labelledby="points-tab">
+                        <h2 class="section-title">Important Points in Trigonometry</h2>
+                        
+                        <div class="important-point">
+                            <h5>🔑 De Moivre's Theorem Applications</h5>
+                            <p>De Moivre's Theorem is essential for finding powers and roots of complex numbers, simplifying trigonometric expressions, and deriving multiple-angle formulas.</p>
+                        </div>
+                        
+                        <div class="important-point">
+                            <h5>🔑 Hyperbolic Function Identities</h5>
+                            <p>Key identities include: cosh<sup>2</sup>x - sinh<sup>2</sup>x = 1, sinh(2x) = 2 sinh x cosh x, and cosh(2x) = cosh<sup>2</sup>x + sinh<sup>2</sup>x.</p>
+                        </div>
+                        
+                        <div class="important-point">
+                            <h5>🔑 Gregory's Series Convergence</h5>
+                            <p>Gregory's series converges for |x| ≤ 1, but converges very slowly when x is close to 1. For x = 1, it gives an alternating series for π/4.</p>
+                        </div>
+                        
+                        <div class="important-point">
+                            <h5>🔑 Complex Logarithm Multi-valued Nature</h5>
+                            <p>The complex logarithm is multi-valued because e<sup>iθ</sup> is periodic with period 2π. The principal value is usually taken with -π < arg(z) ≤ π.</p>
+                        </div>
+                        
+                        <div class="important-point">
+                            <h5>🔑 Trigonometric Summation Formulas</h5>
+                            <p>Summation formulas for sin nθ and cos nθ can be derived using geometric series with complex exponentials or by multiplying by appropriate factors.</p>
+                        </div>
+                        
+                        <div class="important-point">
+                            <h5>🔑 Multiple Angle Expansions</h5>
+                            <p>Expansions of cos nθ and sin nθ can be obtained using De Moivre's Theorem and the binomial theorem, or by using recurrence relations.</p>
+                        </div>
+                        
+                        <div class="important-point">
+                            <h5>🔑 Connection Between Trigonometric and Hyperbolic Functions</h5>
+                            <p>There is a direct relationship: cos(ix) = cosh x and sin(ix) = i sinh x. This connection allows transferring identities between the two function families.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p>📄 This web page is for demonstration purposes only</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
